@@ -1,0 +1,26 @@
+The solution involves a deeper understanding of CSS specificity and adjusting selectors accordingly:
+
+```css
+/* bugSolution.css */
+div.container p {
+  color: blue !important;
+}
+
+div p {
+  color: red; 
+}
+```
+
+By adding `!important` to the first selector, we override the second selector.  Alternatively, we can restructure selectors to make the intent clearer:
+
+```css
+/* Alternative Solution */
+.container p {
+  color: blue;
+}
+p {
+  color: red;
+}
+```
+
+This solution makes it clear that the `p` elements within the container should be blue, and all other `p` elements should be red.
